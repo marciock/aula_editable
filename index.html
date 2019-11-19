@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" >
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+   
+    <div class="container">
+        <div class="mt-5">
+
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#acordeom" aria-expanded="false" aria-controls="acordeom">
+                Button with data-target
+            </button>
+            
+
+        </div>
+        <div class="collapse" id="acordeom" >
+            <div class="border" 
+            style="border-color: brown; background-color: grey;" >
+                    <button class="btn btn-dark" type="button" id="negrito">N</button>
+                    <button class="btn btn-dark" type="button" id="italico">I</button>
+            </div>
+                <div class="card card-body" id="corpo" contenteditable="true"
+                 style="height: 500px; width: auto; border-color: brown;">
+                    TEstando...
+                </div>
+        </div>
+       
+
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.slim.min.js"></script>
+    <script src="popper/popper.min.js" ></script>
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+    <script>
+        const negrito=document.getElementById('negrito');
+        const italico=document.getElementById('italico');
+        negrito.addEventListener('click',()=>{
+            document.execCommand('bold',false,null);
+        });
+        italico.addEventListener('click',()=>{
+            document.execCommand('italic',false,null);
+        })
+
+    
+    
+    </script>
+
+  </body>
+</html>
